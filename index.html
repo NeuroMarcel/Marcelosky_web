@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luz Neon</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      .neon-link {
+        font-family: "Arial", sans-serif;
+        font-size: 3em; /* Aumenté el tamaño del texto */
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+      }
+
+      .neon-link:before,
+      .neon-link:after {
+        content: "Marcelosky_web";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #0ff;
+        opacity: 0.5;
+        animation: neon-animation 1.5s infinite alternate;
+        mix-blend-mode: overlay;
+      }
+
+      .neon-link:hover:before,
+      .neon-link:hover:after {
+        animation: none;
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+      }
+
+      @keyframes neon-animation {
+        0% {
+          filter: blur(5px);
+          transform: scale(1);
+        }
+        100% {
+          filter: blur(2px);
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.php" class="neon-link">Marcelosky_web</a>
+  </body>
+</html>

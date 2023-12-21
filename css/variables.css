@@ -1,0 +1,15 @@
+.cuento{
+    margin-top: 100px;
+    color: white;
+}
+.dropdown-menu{
+    margin: 10px;
+}
+.btn{
+    margin-left: 10px;
+    position: fixed;
+    width: 0px;
+    transition: 0.5s ease;
+    background: transparent;
+    border-color: transparent;
+    }
